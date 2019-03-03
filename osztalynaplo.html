@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="design/css/style.css" type="text/css">
+    <title>Osztálynapló</title>
+</head>
+
+<body>
+    <h1>Osztálynapló</h1>
+
+
+    <div id="div1">
+        <h2>Osztályzatok</h2>
+
+        <table id="osztalyzatokTabla" , border="1" , cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Tanuló</th>
+                    <th>Tantárgy</th>
+                    <th>Érdemjegy</th>
+                    <th>Dátum</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="div2">
+        <h2>Félévi értesítők</h2>
+
+        <button id="generalas" type="button">Generálás</button>
+        <button id="nyomtatas" type="button">Nyomtatás</button>
+        <div id="ertesitokTabla">
+
+        </div>
+
+
+
+    </div>
+
+    <div id="div3">
+        <h2>Statisztika</h2>
+        <table id="statisztikaTabla" , border="1" , cellspacing="0">
+            <select>
+                <option disabled="true" selected="true" value="0">Válassz</option>
+                <optgroup label="nevek"></optgroup>
+                <optgroup label="osztály">
+                    <option>osztály</option>
+                </optgroup>
+            </select>
+            <thead>
+                <tr>
+                    <th>Tantárgy</th>
+                    <th>Átlag</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+        'use strict'
+        var eredmenyek = [];
+        var nevek = ['Kati', 'Juli', 'Móni', 'Géza'];
+        var tantargyak = ['matek', 'angol', 'fizika', 'kémia', 'magyar', 'biológia'];
+        var erdemjegyek = [1, 2, 3, 4, 5];
+        var datum = new Date();
+    </script>
+    <script src="scripts/megjelenites.js" type="text/javascript"></script>
+    <script src="scripts/erdemjegyek.js" type="text/javascript"></script>
+    <script src="scripts/adatbazis.js" type="text/javascript"></script>
+    <script src="scripts/main.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        'use strict'
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

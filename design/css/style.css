@@ -1,0 +1,112 @@
+body{
+    background-color: lime;
+    font-size: 18px;
+    
+
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h2{
+    padding: 0px 25px;
+
+}
+
+tr, th{
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    
+
+}
+
+th{
+    background-color: #036013;
+    color: white;
+
+}
+
+tr:nth-child(2n+0){
+    background-color: #08aa23;
+    color: white;
+
+}
+
+#div2 table{
+    margin-bottom: 10px;
+
+}
+
+div{
+    position: absolute;
+    top: 150px;
+    border: solid 1px #036013;
+    border-radius: 5px;
+}
+
+#div1 {
+    height: 500px;
+    overflow: auto;
+    display: inline-block;
+    
+}
+
+#div2{
+    left: 600px;
+    text-align: center;
+    height: 500px;
+
+}
+
+#div3{
+    left: 1000px;
+    display: inline-block;
+
+}
+
+button{
+    background-color:  #036013;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: outset;
+    cursor: pointer;
+    margin: 5px;
+}
+
+select{
+    width: 120px;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #08aa23;
+    color: white;
+
+}
+
+@media print {
+    #generalas, #nyomtatas, h1, h2, #div1, #div3 {
+      display: none;
+    }
+    
+
+    #div2{
+        display: block;
+        position: absolute;
+        left: 200px;
+        font-size: 40px;
+        border: 0;
+    }
+
+    #div2 table{
+        height: 800px;
+        width: 800px;
+        color: black;
+        background-color: #ddd;
+        page-break-after: always;
+        margin-bottom: 100px;
+
+    }
+  }
