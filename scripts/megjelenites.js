@@ -2,6 +2,7 @@
 window.addEventListener('load', Window_Load_Handler, false);
 var ertesitokTabla = (document.querySelector('#ertesitokTabla'));
 
+//window  eseménykezelő - kirajzolja az 1. táblázatot (osztályzatok), a 3. táblázathoz (statisztika) létrehozza az options elemeket és az átlag tömböt, eseménykezelők logördülő listához és gombokhoz
 function Window_Load_Handler() {
 	loadEredmenyekFromAdatbazis();
 	tablazatRajzolo();
@@ -18,6 +19,7 @@ function Window_Load_Handler() {
 
 }
 
+//függvény az 1. táblázat (osztályzatok) kirajzolására
 function tablazatRajzolo() {
 	var nodeTBody = document.querySelector('#osztalyzatokTabla tbody');
 
@@ -43,6 +45,7 @@ function tablazatRajzolo() {
 	}
 }
 
+//fv a 3. táblázat (statisztika) kirajzolására - ha név szerinti lekérés történik - az OptionsClickHandler eseménykezelő fv hívja meg
 function tablazatRajzoloStatisztikaNev(objektumTomb) {
 
 	var nodeTBody = document.querySelector('#statisztikaTabla tbody');
@@ -62,7 +65,8 @@ function tablazatRajzoloStatisztikaNev(objektumTomb) {
 			}
 }
 
-function tablazatRajzoloStatisztika() {
+//fv a 3. táblázat (statisztika) kirajzolására - ha osztályátlag  lekérés történik - az OptionsClickHandler fv hívja meg
+function tablazatRajzoloStatisztika() { 
 	var statisztikaTomb = osztalyAtlagTantargyakSzerint();
 	var nodeTBody = document.querySelector('#statisztikaTabla tbody');
 
@@ -82,15 +86,15 @@ function tablazatRajzoloStatisztika() {
 	}
 }
 
+//fv a 2. táblázatok (értesítők) kirajzoltatására a GenerálásClickHandler fv hívja meg
 function tablazatRajzoloErtesito(objektumTomb) {
-	var ertesitokTabla = document.querySelector('#ertesitokTabla');
+	var ertesitokTabla = document.querySelector('#ertesitokTabla');  //ez egy div! a táblázatokat egyenként csatoljuk fel
 	var nodeTable = document.createElement('table');
 	nodeTable.setAttribute('cellspacing', '0');
 	nodeTable.setAttribute('border', '1');
 
 	var nodeTHead = document.createElement('thead');
 	var nodeTBody = document.createElement('tbody');
-	nodeTBody.setAttribute('padding-bottom', '10px');
 	var nodeTRHead = document.createElement('tr');
 	var nodeTH = document.createElement('th');
 	nodeTH.setAttribute('colspan', '2');
@@ -107,12 +111,12 @@ function tablazatRajzoloErtesito(objektumTomb) {
 		nodeTD2.setAttribute('width', '125px');
 		nodeTD2.setAttribute('style', 'border: solid black 1px');
 		nodeTH.innerText = objektumTomb[k].tanulo;
-		nodeTH.setAttribute('margin-top', '10px');
 
 		nodeTR.appendChild(nodeTD1);
 		nodeTR.appendChild(nodeTD2);
 		nodeTBody.appendChild(nodeTR);
 	}
+	
 	nodeTRHead.appendChild(nodeTH);
 	nodeTHead.appendChild(nodeTH);
 	nodeTable.appendChild(nodeTBody);
@@ -120,7 +124,8 @@ function tablazatRajzoloErtesito(objektumTomb) {
 	ertesitokTabla.appendChild(nodeTable);
 }
 
-function opciokStatisztikahoz() {
+//fv az options elemek létrehozásához a 3. táblázatnál (statisztika) - Window_Load_Handler hívja meg
+function opciokStatisztikahoz() { 
 	var selectMezo = document.querySelector('select optgroup');
 	var optionNodes = [];
 	
@@ -135,10 +140,11 @@ function opciokStatisztikahoz() {
 	}
 }
 
+//eseménykezelő az options elemekhez - 3. táblázat (statisztika) legördülő lista
 function OptionsClickHandler() {
 
 	var optionSelected = event.target.value;
-	var tablazatStatisztikaNev = tanulokAtlagaTantargyakSzerint();
+	var tablazatStatisztikaNev = tanulokAtlagaTantargyakSzerint(); //main.js
 	var tablazatStatisztikaNevSzurt = [];
 
 	for (var i = 0; i < tablazatStatisztikaNev.length; i++) {
@@ -152,6 +158,7 @@ function OptionsClickHandler() {
 	}
 }
 
+//a Generálás gombhoz tartozó eseménykezelő, a 2. táblázatokat (értesítők) rajzolja ki
 function GeneralasClickHandler() {
 
 	var tablazatStatisztikaNev = tanulokAtlagaTantargyakSzerint();
