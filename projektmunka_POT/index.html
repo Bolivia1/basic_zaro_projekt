@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="design/css/style.css" type="text/css">
+    <title>BiztosítóKirendeltség App</title>
+</head>
+<h1>Biztosító Kirendeltség App</h1>
+<div id="div1">
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Típus</th>
+                <th>Ügynök</th>
+                <th>Összeg [Millió]</th>
+                <th>Időtartam [év]</th>
+                <th>Kötés napja</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div id="div2">
+    <button type="button" id="nyomtatas">Nyomtatás</button>
+</div>
+
+<div id="div3">
+    <select>
+        <option selected="true" disabled="true" value="0">Válassz</option>
+        <optgroup label="Ügynökök">
+
+        </optgroup>
+    </select>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Típus</th>
+                <th>Átlagos összeg</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<body>
+    <script type="text/javascript" src="scripts/kamuDataStore.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/megjelenites.js"></script>
+    <script type="text/javascript">
+        'use strict';
+        var tombok = adatokJSONbolObjektumba();
+        var ugynokok = tombok[0];
+        var biztositasTipusok = tombok[1];
+        var szerzodesek = tombok[2];
+        for(var i=0; i<szerzodesek.length; i++) {
+            for(var j=0; j<biztositasTipusok.length; j++) {
+                if(szerzodesek[i].tipusID == biztositasTipusok[j].TipusID) {
+                    szerzodesek[i].tipusID = biztositasTipusok[j].Megnevezes;
+                }
+            }
+        }
+
+        for(var i=0; i<szerzodesek.length; i++) {
+            for(var j=0; j<ugynokok.length; j++) {
+                if(szerzodesek[i].ugynokID == ugynokok[j].UgynokID) {
+                    szerzodesek[i].ugynokID = ugynokok[j].Nev;
+                }
+            }
+        }
+        var szerzodesekTbody = document.querySelector('#div1 table tbody');
+        var ertekesitesekTablakDivje = document.querySelector('#div2');
+        var statisztikaTbody = document.querySelector('#div3 table tbody');  
+
+        console.log(ugynokok);
+        console.log(biztositasTipusok);
+        console.log(szerzodesek);
+    </script>
+</body>
+
+</html>

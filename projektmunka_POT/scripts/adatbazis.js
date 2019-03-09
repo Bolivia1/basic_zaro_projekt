@@ -1,0 +1,45 @@
+{
+    "ugynokok":[
+        {"UgynokID":1,"Nev":"Mari"},
+        {"UgynokID":2,"Nev":"Gabi"},
+        {"UgynokID":3,"Nev":"Julcsi"},
+        {"UgynokID":4,"Nev":"Andi"},
+        {"UgynokID":5,"Nev":"Feri"},
+        {"UgynokID":6,"Nev":"Ati"},
+        {"UgynokID":7,"Nev":"Robi"}],
+
+    "biztositasTipusok":[
+        {"TipusID":1,"Megnevezes":"Nyugdíj"},
+        {"TipusID":2,"Megnevezes":"Élet"},
+        {"TipusID":3,"Megnevezes":"Lakás"}],
+        
+    "szerzodesek":[
+        {"tipusID":3,"ugynokID":2,"osszeg":2,"tartam":10,"datum":"2018-10-31"},
+        {"tipusID":1,"ugynokID":2,"osszeg":6,"tartam":15,"datum":"2018-11-20"},
+        {"tipusID":1,"ugynokID":1,"osszeg":4,"tartam":20,"datum":"2018-11-16"},
+        {"tipusID":1,"ugynokID":1,"osszeg":3,"tartam":10,"datum":"2018-11-03"},
+        {"tipusID":3,"ugynokID":7,"osszeg":9,"tartam":15,"datum":"2018-11-05"},
+        {"tipusID":1,"ugynokID":7,"osszeg":6,"tartam":15,"datum":"2018-12-15"},
+        {"tipusID":2,"ugynokID":4,"osszeg":5,"tartam":20,"datum":"2018-12-18"},
+        {"tipusID":2,"ugynokID":4,"osszeg":7,"tartam":10,"datum":"2018-12-06"},
+        {"tipusID":2,"ugynokID":2,"osszeg":2,"tartam":10,"datum":"2018-10-02"},
+        {"tipusID":2,"ugynokID":4,"osszeg":7,"tartam":10,"datum":"2018-11-10"},
+        {"tipusID":1,"ugynokID":2,"osszeg":1,"tartam":10,"datum":"2018-12-22"},
+        {"tipusID":3,"ugynokID":2,"osszeg":8,"tartam":10,"datum":"2018-11-17"},
+        {"tipusID":3,"ugynokID":4,"osszeg":9,"tartam":15,"datum":"2018-12-01"},
+        {"tipusID":3,"ugynokID":3,"osszeg":8,"tartam":20,"datum":"2018-12-16"},
+        {"tipusID":1,"ugynokID":7,"osszeg":2,"tartam":15,"datum":"2018-12-03"},
+        {"tipusID":1,"ugynokID":7,"osszeg":4,"tartam":20,"datum":"2018-10-27"},
+        {"tipusID":3,"ugynokID":6,"osszeg":2,"tartam":15,"datum":"2018-12-30"},
+        {"tipusID":1,"ugynokID":7,"osszeg":8,"tartam":20,"datum":"2018-10-19"},
+        {"tipusID":1,"ugynokID":2,"osszeg":1,"tartam":15,"datum":"2018-12-14"},
+        {"tipusID":1,"ugynokID":4,"osszeg":1,"tartam":15,"datum":"2018-10-18"},
+        {"tipusID":2,"ugynokID":7,"osszeg":7,"tartam":20,"datum":"2018-12-01"},
+        {"tipusID":1,"ugynokID":7,"osszeg":5,"tartam":15,"datum":"2018-10-30"},
+        {"tipusID":2,"ugynokID":7,"osszeg":2,"tartam":10,"datum":"2018-10-02"},
+        {"tipusID":3,"ugynokID":4,"osszeg":2,"tartam":20,"datum":"2018-10-22"},
+        {"tipusID":3,"ugynokID":5,"osszeg":7,"tartam":10,"datum":"2018-10-03"},
+        {"tipusID":1,"ugynokID":4,"osszeg":5,"tartam":15,"datum":"2018-11-24"},
+        {"tipusID":2,"ugynokID":2,"osszeg":9,"tartam":10,"datum":"2018-10-17"},
+        {"tipusID":2,"ugynokID":7,"osszeg":9,"tartam":10,"datum":"2018-12-31"},]
+}';
