@@ -73,7 +73,7 @@ function tablazatRajzoloErtekesites(objektumTomb, tablazatokDivje) {
 		nodeTBody.appendChild(nodeTR);			
 	}
 	nodeTRHead.appendChild(nodeTH);
-	nodeTHead.appendChild(nodeTH);
+	nodeTHead.appendChild(nodeTRHead);
 	nodeTable.appendChild(nodeTBody);
 	nodeTable.appendChild(nodeTHead);
 	tablazatokDivje.appendChild(nodeTable);
